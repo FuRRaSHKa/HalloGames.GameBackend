@@ -30,3 +30,4 @@ E:\Projects\HalloGames.GameBackend\GameBackend\obj\Debug\net8.0\refint\GameBacke
 E:\Projects\HalloGames.GameBackend\GameBackend\obj\Debug\net8.0\GameBackend.pdb
 E:\Projects\HalloGames.GameBackend\GameBackend\obj\Debug\net8.0\GameBackend.genruntimeconfig.cache
 E:\Projects\HalloGames.GameBackend\GameBackend\obj\Debug\net8.0\ref\GameBackend.dll
+E:\Projects\HalloGames.GameBackend\GameBackend\obj\Debug\net8.0\GameBackend.sourcelink.json
