@@ -3,20 +3,22 @@ using GameBackend.HalloGames.Auth.Api.Models.Credentials;
 using GameBackend.HalloGames.Auth.Api.Models.Results;
 using GameBackend.HalloGames.Tokens;
 using GameBackend.HalloGames.Users;
+using GameBackend.HalloGames.Users.Data;
 using GameBackend.HalloGames.Users.Models;
 
 namespace GameBackend.HalloGames.Auth.Api.Services
 {
-    internal class AuthSystem
+    internal class AuthService
     {
         private readonly IAuthProviderSelector _providerSelector;
         private readonly ITokenService _tokenService;
-        private readonly IUserRepository _userRepository;
+        private readonly UserDbContext _userDbContext;
 
-        internal AuthSystem(IAuthProviderSelector authProviderSelector, ITokenService tokenService)
+        internal AuthService(IAuthProviderSelector authProviderSelector, ITokenService tokenService, UserDbContext userDbContext)
         {
             _providerSelector = authProviderSelector;
             _tokenService = tokenService;
+            _userDbContext = userDbContext;
         }
 
         public async Task<TokenResult?> Login<TCredentials>(TCredentials credentials) where TCredentials : AuthCredentials
@@ -26,7 +28,7 @@ namespace GameBackend.HalloGames.Auth.Api.Services
             if (identity == null)
                 return null;
 
-            var accesToken = _tokenService.GenerateAccesToken(identity);
+            var accesToken = await _tokenService.GenerateAccesToken(identity);
             var refreshToken = await _tokenService.GenerateRefreshToken(identity);
         
             return new TokenResult(accesToken, refreshToken);
@@ -45,7 +47,8 @@ namespace GameBackend.HalloGames.Auth.Api.Services
                 ExterntalId = identity.ExterntalId,
             };
 
-            await _userRepository.Register(user);
+            _userDbContext.Users.Add(user);
+            await _userDbContext.SaveChangesAsync();
             return user;
         }
 

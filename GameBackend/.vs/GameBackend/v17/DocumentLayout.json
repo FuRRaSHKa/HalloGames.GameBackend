@@ -3,100 +3,12 @@
   "WorkspaceRootPath": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\gamebackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:gamebackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.users\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.users\\data\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.tokens\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.tokens\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.users\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.users\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.tokens\\data\\refreshtokendbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.tokens\\data\\refreshtokendbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\authproviders\\baseauthprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\authproviders\\baseauthprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\authproviders\\iauthprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\authproviders\\iauthprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\models\\credentials\\steamcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\models\\credentials\\steamcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\authproviders\\authproviderselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\authproviders\\authproviderselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\authproviders\\iauthproviderselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\authproviders\\iauthproviderselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.tokens\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.tokens\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\services\\authsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\services\\authsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.tokens\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.tokens\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.users\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.users\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\models\\userauthidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\models\\userauthidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\models\\results\\tokenresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\models\\results\\tokenresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\models\\requests\\emailregisterrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\models\\requests\\emailregisterrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\models\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\models\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\models\\credentials\\emailcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\models\\credentials\\emailcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\models\\credentials\\authcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\models\\credentials\\authcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\authproviders\\authtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\authproviders\\authtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\hallogames.auth.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:hallogames.auth.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|e:\\projects\\hallogames.gamebackend\\gamebackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}|GameBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,314 +54,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RefreshTokenDbContext.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\Data\\RefreshTokenDbContext.cs",
-              "RelativeDocumentMoniker": "HalloGames.Tokens\\Data\\RefreshTokenDbContext.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\Data\\RefreshTokenDbContext.cs",
-              "RelativeToolTip": "HalloGames.Tokens\\Data\\RefreshTokenDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T23:28:19.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthProviderSelector.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\AuthProviderSelector.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\AuthProviders\\AuthProviderSelector.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\AuthProviderSelector.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\AuthProviders\\AuthProviderSelector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T20:13:57.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAuthProvider.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\IAuthProvider.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\AuthProviders\\IAuthProvider.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\IAuthProvider.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\AuthProviders\\IAuthProvider.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:29:29.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SteamCredentials.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Credentials\\SteamCredentials.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Models\\Credentials\\SteamCredentials.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Credentials\\SteamCredentials.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Models\\Credentials\\SteamCredentials.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:53:28.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BaseAuthProvider.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\BaseAuthProvider.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\AuthProviders\\BaseAuthProvider.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\BaseAuthProvider.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\AuthProviders\\BaseAuthProvider.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T20:00:28.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\UserRepository.cs",
-              "RelativeDocumentMoniker": "HalloGames.Users\\UserRepository.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\UserRepository.cs",
-              "RelativeToolTip": "HalloGames.Users\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T21:52:33.354Z",
+              "DocumentIndex": 0,
+              "Title": "GameBackend",
+              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\GameBackend.csproj",
+              "RelativeDocumentMoniker": "GameBackend.csproj",
+              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\GameBackend.csproj",
+              "RelativeToolTip": "GameBackend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-18T16:28:01.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\TokenService.cs",
-              "RelativeDocumentMoniker": "HalloGames.Tokens\\TokenService.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\TokenService.cs",
-              "RelativeToolTip": "HalloGames.Tokens\\TokenService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAQwBcAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T18:55:42.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "UserDbContext.cs",
               "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\Data\\UserDbContext.cs",
               "RelativeDocumentMoniker": "HalloGames.Users\\Data\\UserDbContext.cs",
               "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\Data\\UserDbContext.cs",
               "RelativeToolTip": "HalloGames.Users\\Data\\UserDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAApAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T19:12:48.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IAuthProviderSelector.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\IAuthProviderSelector.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\AuthProviders\\IAuthProviderSelector.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\IAuthProviderSelector.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\AuthProviders\\IAuthProviderSelector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:29:04.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\ITokenService.cs",
-              "RelativeDocumentMoniker": "HalloGames.Tokens\\ITokenService.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\ITokenService.cs",
-              "RelativeToolTip": "HalloGames.Tokens\\ITokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T18:55:52.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthSystem.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Services\\AuthSystem.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Services\\AuthSystem.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Services\\AuthSystem.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Services\\AuthSystem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:27:10.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RefreshToken.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\Models\\RefreshToken.cs",
-              "RelativeDocumentMoniker": "HalloGames.Tokens\\Models\\RefreshToken.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Tokens\\Models\\RefreshToken.cs",
-              "RelativeToolTip": "HalloGames.Tokens\\Models\\RefreshToken.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T23:26:42.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-17T23:15:30.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TokenResult.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Results\\TokenResult.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Models\\Results\\TokenResult.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Results\\TokenResult.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Models\\Results\\TokenResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:53:33.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EmailRegisterRequest.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Requests\\EmailRegisterRequest.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Models\\Requests\\EmailRegisterRequest.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Requests\\EmailRegisterRequest.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Models\\Requests\\EmailRegisterRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:53:36.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Requests\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Models\\Requests\\LoginRequest.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Requests\\LoginRequest.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Models\\Requests\\LoginRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:53:37.504Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserAuthIdentity.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\UserAuthIdentity.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Models\\UserAuthIdentity.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\UserAuthIdentity.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Models\\UserAuthIdentity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:38:22.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "HalloGames.Users\\IUserRepository.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\IUserRepository.cs",
-              "RelativeToolTip": "HalloGames.Users\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T21:52:40.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\Models\\User.cs",
-              "RelativeDocumentMoniker": "HalloGames.Users\\Models\\User.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Users\\Models\\User.cs",
-              "RelativeToolTip": "HalloGames.Users\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:59:31.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AuthType.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\AuthType.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\AuthProviders\\AuthType.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\AuthProviders\\AuthType.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\AuthProviders\\AuthType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:38:30.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AuthCredentials.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Credentials\\AuthCredentials.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Models\\Credentials\\AuthCredentials.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Credentials\\AuthCredentials.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Models\\Credentials\\AuthCredentials.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:53:18.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "EmailCredentials.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Credentials\\EmailCredentials.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Models\\Credentials\\EmailCredentials.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Models\\Credentials\\EmailCredentials.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Models\\Credentials\\EmailCredentials.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T04:53:20.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "HalloGames.Auth.Api\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\HalloGames.Auth.Api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "HalloGames.Auth.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T20:30:22.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Projects\\HalloGames.GameBackend\\GameBackend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T13:55:36.572Z",
+              "WhenOpened": "2026-09-18T16:24:08.433Z",
               "EditorCaption": ""
             }
           ]
