@@ -37,18 +37,10 @@ namespace GameBackend.HalloGames.Auth.Api.Services
         public async Task<User?> Register<TCredentials>(TCredentials credentials) where TCredentials : AuthCredentials
         {
             var provider = _providerSelector.GetAuthProvider<TCredentials>();
-            var identity = await provider.Register(credentials);
-            if (identity == null)
+            var user = await provider.Register(credentials);
+            if (user == null)
                 return null;
 
-            var user = new User() 
-            {
-                AuthType = identity.AuthType,
-                ExterntalId = identity.ExterntalId,
-            };
-
-            _userDbContext.Users.Add(user);
-            await _userDbContext.SaveChangesAsync();
             return user;
         }
 

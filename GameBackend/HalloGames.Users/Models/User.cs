@@ -6,8 +6,5 @@ namespace GameBackend.HalloGames.Users.Models
     {
         public Guid Id { get; set; }
         public string Username { get; init; } = string.Empty;
-
-        public AuthType AuthType { get; init; }
-        public string ExterntalId { get; init; } = string.Empty;
     }
 }

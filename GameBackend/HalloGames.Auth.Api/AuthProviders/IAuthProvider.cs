@@ -1,5 +1,4 @@
 ﻿using GameBackend.HalloGames.Auth.Api.Models.Credentials;
-using GameBackend.HalloGames.Auth.Api.Models.Results;
 using GameBackend.HalloGames.Users.Models;
 
 namespace GameBackend.HalloGames.Auth.Api.AuthProviders
