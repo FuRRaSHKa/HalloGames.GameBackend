@@ -29,7 +29,7 @@ builder.Services.AddScoped<ITokenService>(services => new TokenService(
     services.GetRequiredService<RefreshTokenDbContext>(), 
     services.GetRequiredService<UserDbContext>()));
 
-builder.Services.AddScoped<AuthService>(services => new AuthService(
+builder.Services.AddScoped<IAuthService>(services => new AuthService(
     services.GetRequiredService<IAuthProviderSelector>(),
     services.GetRequiredService<ITokenService>(),
     services.GetRequiredService<UserDbContext>()));

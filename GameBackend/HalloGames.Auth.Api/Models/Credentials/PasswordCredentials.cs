@@ -1,6 +1,6 @@
 ﻿namespace GameBackend.HalloGames.Auth.Api.Models.Credentials
 {
-    internal record PasswordCredentials
+    public record PasswordCredentials
         (
             string Email,
             string Password

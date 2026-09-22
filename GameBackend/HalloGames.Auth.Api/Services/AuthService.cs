@@ -8,7 +8,7 @@ using GameBackend.HalloGames.Users.Models;
 
 namespace GameBackend.HalloGames.Auth.Api.Services
 {
-    internal class AuthService
+    internal class AuthService : IAuthService
     {
         private readonly IAuthProviderSelector _providerSelector;
         private readonly ITokenService _tokenService;

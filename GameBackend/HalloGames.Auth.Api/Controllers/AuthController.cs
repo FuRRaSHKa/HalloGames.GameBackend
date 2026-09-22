@@ -1,5 +1,6 @@
 ﻿using GameBackend.HalloGames.Auth.Api.Models.Requests;
-using Microsoft.AspNetCore.Http;
+using GameBackend.HalloGames.Auth.Api.Models.Credentials;
+using GameBackend.HalloGames.Auth.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameBackend.HalloGames.Auth.Api.Controllers
@@ -8,22 +9,35 @@ namespace GameBackend.HalloGames.Auth.Api.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        [HttpGet("ping")]
-        public IActionResult Ping()
+        private readonly IAuthService _authService;
+
+        public AuthController(IAuthService authService)
         {
-            return Ok();
+            _authService = authService;
         }
 
         [HttpPost("register/email")]
         public async Task<IActionResult> RegisterByEmail(EmailRegisterRequest emailRegisterRequest)
         {
-            return Ok(emailRegisterRequest);
+            var credentials = new PasswordCredentials(emailRegisterRequest.Email, emailRegisterRequest.Password);
+            var user = await _authService.Register(credentials);
+
+            if (user == null)
+                return Conflict();
+
+            return Ok(user);
         }
 
         [HttpPost("login/email")]
         public async Task<IActionResult> LoginByEmail(EmailLoginRequest emailLoginRequest)
         {
-            return Ok(emailLoginRequest);
+            var credentials = new PasswordCredentials(emailLoginRequest.Email, emailLoginRequest.Password);
+            var tokens = await _authService.Login(credentials);
+
+            if (tokens == null)
+                return Unauthorized();
+
+            return Ok(tokens);
         }
     }
 }
