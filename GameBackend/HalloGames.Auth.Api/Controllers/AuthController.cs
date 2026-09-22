@@ -20,6 +20,7 @@ namespace GameBackend.HalloGames.Auth.Api.Controllers
             return Ok(emailRegisterRequest);
         }
 
+        [HttpPost("login/email")]
         public async Task<IActionResult> LoginByEmail(EmailLoginRequest emailLoginRequest)
         {
             return Ok(emailLoginRequest);

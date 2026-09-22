@@ -4,9 +4,17 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
 {
     internal class AuthProviderSelector : IAuthProviderSelector
     {
-        public IAuthProvider<TCredentials> GetAuthProvider<TCredentials>() where TCredentials : AuthCredentials
+        private readonly IServiceProvider _services;
+
+        public AuthProviderSelector(IServiceProvider services)
         {
-            return null;
+            _services = services;
+        }
+
+        public IAuthProvider<TCredentials> GetAuthProvider<TCredentials>()
+            where TCredentials : AuthCredentials
+        {
+            return _services.GetRequiredService<IAuthProvider<TCredentials>>();
         }
     }
 }

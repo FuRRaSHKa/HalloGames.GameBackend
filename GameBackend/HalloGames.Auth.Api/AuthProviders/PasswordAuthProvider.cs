@@ -9,12 +9,10 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
 {
     public class PasswordAuthProvider : IAuthProvider<PasswordCredentials>
     {
-        private readonly UserDbContext _userDbContext;
         private readonly PasswordDbContext _passwordDbContext;
 
-        public PasswordAuthProvider(UserDbContext userDbContext, PasswordDbContext passwordDbContext)
+        public PasswordAuthProvider(PasswordDbContext passwordDbContext)
         {
-            _userDbContext = userDbContext;
             _passwordDbContext = passwordDbContext;
         }
 
@@ -26,7 +24,7 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
                 return null;
             }
 
-            var user = await _userDbContext.Users.FirstOrDefaultAsync(u => u.Id == passwordIdentity.UserId);
+            var user = await _passwordDbContext.Users.FirstOrDefaultAsync(u => u.Id == passwordIdentity.UserId);
             if(!BCrypt.Net.BCrypt.Verify(credentials.Password, passwordIdentity.PasswordHash))
             {
                 return null;
@@ -44,11 +42,8 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
 
             var user = new User()
             {
-
+                Id = Guid.NewGuid(),
             };
-
-             _userDbContext.Users.Add(user);
-            await _userDbContext.SaveChangesAsync();
 
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(credentials.Password);
             var passwordIdentity = new PasswordUserIdentity()
@@ -58,7 +53,9 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
                 PasswordHash = hashedPassword
             };
 
+            _passwordDbContext.Users.Add(user);
             _passwordDbContext.Passwords.Add(passwordIdentity);
+
             await _passwordDbContext.SaveChangesAsync();
             return user;
         }

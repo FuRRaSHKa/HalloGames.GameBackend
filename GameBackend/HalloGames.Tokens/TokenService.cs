@@ -73,20 +73,20 @@ namespace GameBackend.HalloGames.Tokens
 
         public async Task<string> GenerateRefreshToken(User user)
         {
-            var tokenBytes = RandomNumberGenerator.GetBytes(32);
-            var tokenHash = HashUtils.HashRefrestToken(tokenBytes);
+            var token = Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
+            var tokenHash = HashUtils.HashRefrestToken(token);
 
             var refreshToken = new RefreshToken
             {
                 Token = tokenHash,
                 UserId = user.Id,
                 Expires = DateTime.UtcNow.AddDays(
-               double.Parse(_configuration["Jwt:RefreshTokenExpirationDays"]!))
+                double.Parse(_configuration["Jwt:RefreshTokenExpirationDays"]!))
             };
 
             _refreshTokenBdContext.RefreshTokens.Add(refreshToken);
             await _refreshTokenBdContext.SaveChangesAsync();
-            return refreshToken.Token;
+            return token;
         }
     }
 }
