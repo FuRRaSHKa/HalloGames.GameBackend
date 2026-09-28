@@ -26,11 +26,14 @@ public class PasswordWhitespaceFlowTests
             new DbContextOptionsBuilder<PasswordDbContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString())
                 .Options);
+
         using var userDb = new UserDbContext(
             new DbContextOptionsBuilder<UserDbContext>().Options);
+
         var service = new AuthService(
             new PasswordProviderSelector(new PasswordAuthProvider(passwordDb)),
             new StubTokenService(), userDb);
+
         var controller = new AuthController(service);
 
         var registration = await controller.RegisterByEmail(new EmailRegisterRequest(email, password));

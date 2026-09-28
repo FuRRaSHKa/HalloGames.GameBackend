@@ -22,6 +22,7 @@ public class AuthServiceTests
             new DbContextOptionsBuilder<PasswordDbContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString())
                 .Options);
+
         passwordDbContext.Users.Add(user);
         passwordDbContext.Passwords.Add(new PasswordUserIdentity
         {
@@ -29,6 +30,7 @@ public class AuthServiceTests
             ExternalId = email,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(correctPassword)
         });
+
         await passwordDbContext.SaveChangesAsync();
         passwordDbContext.ChangeTracker.Clear();
 

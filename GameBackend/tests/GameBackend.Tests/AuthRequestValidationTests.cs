@@ -88,8 +88,10 @@ public class AuthRequestValidationTests
         var context = new ActionContext(
             new DefaultHttpContext { RequestServices = provider },
             new RouteData(), new ActionDescriptor());
+
         provider.GetRequiredService<IObjectModelValidator>()
             .Validate(context, null, string.Empty, request);
+
         return context.ModelState;
     }
 }
