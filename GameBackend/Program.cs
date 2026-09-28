@@ -3,6 +3,7 @@ using GameBackend.HalloGames.Auth.Api.Data;
 using GameBackend.HalloGames.Auth.Api.Models.Credentials;
 using GameBackend.HalloGames.Auth.Api.Services;
 using GameBackend.HalloGames.Tokens;
+using GameBackend.HalloGames.Time;
 using GameBackend.HalloGames.Tokens.Data;
 using GameBackend.HalloGames.Users.Data;
 using Microsoft.EntityFrameworkCore;
@@ -24,10 +25,12 @@ builder.Services.AddDbContext<RefreshTokenDbContext>(ConfigureDatabase);
 
 builder.Services.AddScoped<IAuthProvider<PasswordCredentials>, PasswordAuthProvider>();
 builder.Services.AddScoped<IAuthProviderSelector, AuthProviderSelector>();
+builder.Services.AddSingleton<ITimeService, SystemTimeService>();
 builder.Services.AddScoped<ITokenService>(services => new TokenService(
     services.GetRequiredService<IConfiguration>(),
     services.GetRequiredService<RefreshTokenDbContext>(), 
-    services.GetRequiredService<UserDbContext>()));
+    services.GetRequiredService<UserDbContext>(),
+    services.GetRequiredService<ITimeService>()));
 
 builder.Services.AddScoped<IAuthService>(services => new AuthService(
     services.GetRequiredService<IAuthProviderSelector>(),

@@ -1,5 +1,6 @@
-﻿using GameBackend.HalloGames.Tokens.Data;
+using GameBackend.HalloGames.Tokens.Data;
 using GameBackend.HalloGames.Tokens.Models;
+using GameBackend.HalloGames.Time;
 using GameBackend.HalloGames.Users.Data;
 using GameBackend.HalloGames.Users.Models;
 using GameBackend.HalloGames.Utils;
@@ -17,12 +18,14 @@ namespace GameBackend.HalloGames.Tokens
         private readonly IConfiguration _configuration;
         private readonly RefreshTokenDbContext _refreshTokenBdContext;
         private readonly UserDbContext _userDbContext;
+        private readonly ITimeService _timeService;
 
-        internal TokenService(IConfiguration configuration, RefreshTokenDbContext refreshTokenBdContext, UserDbContext userDbContext)
+        internal TokenService(IConfiguration configuration, RefreshTokenDbContext refreshTokenBdContext, UserDbContext userDbContext, ITimeService timeService)
         {
             _configuration = configuration;
             _refreshTokenBdContext = refreshTokenBdContext;
             _userDbContext = userDbContext;
+            _timeService = timeService;
         }
 
         public async Task<string> GenerateAccesToken(User user)
@@ -46,7 +49,7 @@ namespace GameBackend.HalloGames.Tokens
                 issuer: jwtSettings["Issuer"],
                 audience: jwtSettings["Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(double.Parse(jwtSettings["AccessTokenExpirationMinutes"]!)),
+                expires: _timeService.UtcNow.AddMinutes(double.Parse(jwtSettings["AccessTokenExpirationMinutes"]!)),
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
@@ -57,7 +60,7 @@ namespace GameBackend.HalloGames.Tokens
             var tokenHash = HashUtils.HashRefrestToken(refreshToken);
             var refreshTokens = await _refreshTokenBdContext.RefreshTokens.FirstOrDefaultAsync(f => f.Token == tokenHash);
             
-            if(refreshTokens == null || refreshTokens.IsRevoked || refreshTokens.Expires <= DateTime.UtcNow)
+            if(refreshTokens == null || refreshTokens.IsRevoked || refreshTokens.Expires <= _timeService.UtcNow)
             {
                 return null;
             }
@@ -80,7 +83,7 @@ namespace GameBackend.HalloGames.Tokens
             {
                 Token = tokenHash,
                 UserId = user.Id,
-                Expires = DateTime.UtcNow.AddDays(
+                Expires = _timeService.UtcNow.AddDays(
                 double.Parse(_configuration["Jwt:RefreshTokenExpirationDays"]!))
             };
 
