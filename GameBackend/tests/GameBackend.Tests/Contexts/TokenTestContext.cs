@@ -5,7 +5,7 @@ using GameBackend.HalloGames.Users.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace GameBackend.Tests;
+namespace GameBackend.Tests.Contexts;
 
 internal sealed class TokenTestContext : IDisposable
 {
