@@ -4,11 +4,16 @@ using GameBackend.HalloGames.Tokens.Data;
 using GameBackend.HalloGames.Users.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System.Security.Cryptography;
 
 namespace GameBackend.Tests.Contexts;
 
 internal sealed class TokenTestContext : IDisposable
 {
+    public const string SigningKeyId = "test-key";
+
+    public RSAParameters PublicKey { get; }
+
     public FakeTimeService Time { get; } = new()
     {
         UtcNow = new DateTime(2020, 1, 1, 12, 0, 0, DateTimeKind.Utc)
@@ -26,10 +31,14 @@ internal sealed class TokenTestContext : IDisposable
 
     public TokenTestContext()
     {
+        using var rsa = RSA.Create(2048);
+        PublicKey = rsa.ExportParameters(false);
+
         var configuration = new ConfigurationBuilder().AddInMemoryCollection(
             new Dictionary<string, string?>
             {
-                ["Jwt:Key"] = "test-signing-key-with-at-least-32-bytes",
+                ["Jwt:PrivateKeyPem"] = rsa.ExportPkcs8PrivateKeyPem(),
+                ["Jwt:KeyId"] = SigningKeyId,
                 ["Jwt:Issuer"] = "tests",
                 ["Jwt:Audience"] = "tests",
                 ["Jwt:AccessTokenExpirationMinutes"] = "15",

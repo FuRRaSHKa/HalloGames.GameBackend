@@ -31,19 +31,27 @@ namespace GameBackend.HalloGames.Tokens
         public async Task<string> GenerateAccesToken(User user)
         {
             var jwtSettings = _configuration.GetSection("Jwt");
-            var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]!);
+            var privateKey = jwtSettings["PrivateKeyPem"];
+            var keyId = jwtSettings["KeyId"];
+            var rsa = RSA.Create();
+            rsa.ImportFromPem(privateKey);
+
+            var securityKey = new RsaSecurityKey(rsa)
+            {
+                KeyId = keyId
+            };
 
             var claims = new[]
             {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new Claim(JwtRegisteredClaimNames.Name, user.Username),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
-        };
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.Name, user.Username),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+            };
 
             var creds = new SigningCredentials(
-                new SymmetricSecurityKey(key),
-                SecurityAlgorithms.HmacSha256);
+                securityKey,
+                SecurityAlgorithms.RsaSha256);
 
             var token = new JwtSecurityToken(
                 issuer: jwtSettings["Issuer"],
@@ -55,21 +63,17 @@ namespace GameBackend.HalloGames.Tokens
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public async Task<string> GenerateAccesToken(string refreshToken)
+        public async Task<string?> GenerateAccesToken(string refreshToken)
         {
             var tokenHash = HashUtils.HashRefrestToken(refreshToken);
             var refreshTokens = await _refreshTokenBdContext.RefreshTokens.FirstOrDefaultAsync(f => f.Token == tokenHash);
-            
-            if(refreshTokens == null || refreshTokens.IsRevoked || refreshTokens.Expires <= _timeService.UtcNow)
-            {
+
+            if (refreshTokens == null || refreshTokens.IsRevoked || refreshTokens.Expires <= _timeService.UtcNow)
                 return null;
-            }
 
             var user = await _userDbContext.Users.FirstOrDefaultAsync(u => u.Id == refreshTokens.UserId);
-            if(user == null)
-            {
+            if (user == null)
                 return null;
-            }
 
             return await GenerateAccesToken(user);
         }
