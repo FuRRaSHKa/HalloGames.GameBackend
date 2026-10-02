@@ -1,0 +1,21 @@
+@Auth_HostAddress = http://localhost:5055
+
+POST {{Auth_HostAddress}}/api/auth/register/email
+Content-Type: application/json
+
+{
+  "email": "player@example.com",
+  "password": "local-example-password"
+}
+
+###
+
+POST {{Auth_HostAddress}}/api/auth/login/email
+Content-Type: application/json
+
+{
+  "email": "player@example.com",
+  "password": "local-example-password"
+}
+
+###

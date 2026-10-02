@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameBackend", "GameBackend.csproj", "{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameBackend.Auth", "services\Auth\GameBackend.Auth.csproj", "{73FAA3C0-080E-4DAB-88EB-CD8943C8879E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{C0FC7182-7023-465D-9FD7-906F8757C886}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
 EndProject
@@ -48,6 +50,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{73FAA3C0-080E-4DAB-88EB-CD8943C8879E} = {C0FC7182-7023-465D-9FD7-906F8757C886}
 		{808B3A17-6FF2-446A-9B4F-3CCEF26C1EA2} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

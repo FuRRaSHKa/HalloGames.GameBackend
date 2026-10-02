@@ -20,7 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\GameBackend.csproj" />
+		<ProjectReference Include="..\..\services\Auth\GameBackend.Auth.csproj" />
 	</ItemGroup>
 
 </Project>
