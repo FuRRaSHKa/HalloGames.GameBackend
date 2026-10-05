@@ -1,6 +1,7 @@
 using GameBackend.HalloGames.Time;
 using GameBackend.HalloGames.Tokens;
 using GameBackend.HalloGames.Tokens.Data;
+using GameBackend.HalloGames.Users.Models;
 using GameBackend.HalloGames.Users.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -46,6 +47,15 @@ internal sealed class TokenTestContext : IDisposable
             }).Build();
 
         Service = new TokenService(configuration, RefreshDb, UserDb, Time);
+    }
+
+    public async Task<User> CreateUserAsync(string username = "Player")
+    {
+        var user = new User { Id = Guid.NewGuid(), Username = username };
+        UserDb.Users.Add(user);
+        await UserDb.SaveChangesAsync();
+        UserDb.ChangeTracker.Clear();
+        return user;
     }
 
     public void Dispose()

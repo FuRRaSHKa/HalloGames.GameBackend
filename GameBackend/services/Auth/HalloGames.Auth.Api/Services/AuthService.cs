@@ -12,13 +12,11 @@ namespace GameBackend.HalloGames.Auth.Api.Services
     {
         private readonly IAuthProviderSelector _providerSelector;
         private readonly ITokenService _tokenService;
-        private readonly UserDbContext _userDbContext;
 
         internal AuthService(IAuthProviderSelector authProviderSelector, ITokenService tokenService, UserDbContext userDbContext)
         {
             _providerSelector = authProviderSelector;
             _tokenService = tokenService;
-            _userDbContext = userDbContext;
         }
 
         public async Task<TokenResult?> Login<TCredentials>(TCredentials credentials) where TCredentials : AuthCredentials
@@ -46,7 +44,11 @@ namespace GameBackend.HalloGames.Auth.Api.Services
 
         public async Task<TokenResult?> RefreshTokenAsync(string refreshToken)
         {
-            return null;
+            var accesToken = await _tokenService.GenerateAccesToken(refreshToken);
+            if(accesToken == null)
+                return null;    
+
+            return new TokenResult(accesToken, refreshToken);
         }
     }
 }

@@ -1,3 +1,4 @@
+using GameBackend.Auth.HalloGames.Auth.Api.Models.Requests;
 using GameBackend.HalloGames.Auth.Api.Models.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,15 @@ namespace GameBackend.Tests;
 
 public class AuthRequestValidationTests
 {
+    [Theory]
+    [InlineData(null)]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void RefreshRequest_RejectsMissingRefreshToken(string? refreshToken)
+    {
+        AssertInvalid(new RefreshTokenRequest { RefreshToken = refreshToken! }, "RefreshToken");
+    }
+
     [Theory]
     [InlineData(null)]
     [InlineData("")]

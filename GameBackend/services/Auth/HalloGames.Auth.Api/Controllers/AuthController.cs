@@ -2,6 +2,7 @@
 using GameBackend.HalloGames.Auth.Api.Models.Credentials;
 using GameBackend.HalloGames.Auth.Api.Services;
 using Microsoft.AspNetCore.Mvc;
+using GameBackend.Auth.HalloGames.Auth.Api.Models.Requests;
 
 namespace GameBackend.HalloGames.Auth.Api.Controllers
 {
@@ -33,6 +34,17 @@ namespace GameBackend.HalloGames.Auth.Api.Controllers
         {
             var credentials = new PasswordCredentials(emailLoginRequest.Email, emailLoginRequest.Password);
             var tokens = await _authService.Login(credentials);
+
+            if (tokens == null)
+                return Unauthorized();
+
+            return Ok(tokens);
+        }
+
+        [HttpPost("refresh")]
+        public async Task<IActionResult> RefreshToken(RefreshTokenRequest refreshTokenRequest)
+        {
+            var tokens = await _authService.RefreshTokenAsync(refreshTokenRequest.RefreshToken);
 
             if (tokens == null)
                 return Unauthorized();

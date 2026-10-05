@@ -53,6 +53,6 @@ internal sealed class StubTokenService : ITokenService
         return Task.FromResult("test-refresh-token");
     }
 
-    public Task<string> GenerateAccesToken(string refreshToken) =>
+    public Task<string?> GenerateAccesToken(string refreshToken) =>
         throw new NotSupportedException("Token refresh is not expected in this test.");
 }
