@@ -1,7 +1,6 @@
-﻿using GameBackend.HalloGames.Auth.Api.Data;
+using GameBackend.HalloGames.Auth.Api.Data;
 using GameBackend.HalloGames.Auth.Api.Models.Credentials;
 using GameBackend.HalloGames.Auth.Api.Models.Identities;
-using GameBackend.HalloGames.Users.Data;
 using GameBackend.HalloGames.Users.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,22 +8,22 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
 {
     public class PasswordAuthProvider : IAuthProvider<PasswordCredentials>
     {
-        private readonly PasswordDbContext _passwordDbContext;
+        private readonly AuthDbContext _authDbContext;
 
-        public PasswordAuthProvider(PasswordDbContext passwordDbContext)
+        public PasswordAuthProvider(AuthDbContext authDbContext)
         {
-            _passwordDbContext = passwordDbContext;
+            _authDbContext = authDbContext;
         }
 
         async Task<User?> IAuthProvider<PasswordCredentials>.Login(PasswordCredentials credentials)
         {
-            var passwordIdentity = await _passwordDbContext.Passwords.FirstOrDefaultAsync(u => u.ExternalId == credentials.Email);
+            var passwordIdentity = await _authDbContext.Passwords.FirstOrDefaultAsync(u => u.ExternalId == credentials.Email);
             if(passwordIdentity == null)
             {
                 return null;
             }
 
-            var user = await _passwordDbContext.Users.FirstOrDefaultAsync(u => u.Id == passwordIdentity.UserId);
+            var user = await _authDbContext.Users.FirstOrDefaultAsync(u => u.Id == passwordIdentity.UserId);
             if(!BCrypt.Net.BCrypt.Verify(credentials.Password, passwordIdentity.PasswordHash))
             {
                 return null;
@@ -35,7 +34,7 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
 
         async Task<User?> IAuthProvider<PasswordCredentials>.Register(PasswordCredentials credentials)
         {
-            if(await _passwordDbContext.Passwords.AnyAsync(u => u.ExternalId == credentials.Email))
+            if(await _authDbContext.Passwords.AnyAsync(u => u.ExternalId == credentials.Email))
             {
                 return null;
             }
@@ -53,10 +52,10 @@ namespace GameBackend.HalloGames.Auth.Api.AuthProviders
                 PasswordHash = hashedPassword
             };
 
-            _passwordDbContext.Users.Add(user);
-            _passwordDbContext.Passwords.Add(passwordIdentity);
+            _authDbContext.Users.Add(user);
+            _authDbContext.Passwords.Add(passwordIdentity);
 
-            await _passwordDbContext.SaveChangesAsync();
+            await _authDbContext.SaveChangesAsync();
             return user;
         }
     }

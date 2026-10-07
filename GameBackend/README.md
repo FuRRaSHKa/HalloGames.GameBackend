@@ -28,7 +28,22 @@ tests/
 
 Команды выполняются из каталога с `GameBackend.sln`. Требуется .NET 10 SDK.
 Для регистрации и входа нужен PostgreSQL с подготовленной схемой.
-Миграции пока отсутствуют: запуск приложения не создаёт таблицы автоматически.
+Схема описана миграциями `AuthDbContext` в
+`services/Auth/HalloGames.Auth.Api/Data/Migrations`.
+Запуск приложения не применяет миграции автоматически.
+
+Перед первым запуском укажите подключение к целевой PostgreSQL и примените миграции:
+
+```powershell
+dotnet tool restore
+$env:ConnectionStrings__DefaultConnection = 'Host=localhost;Port=5432;Database=gamebackend_auth;Username=auth;Password=<database-password>'
+dotnet ef database update --project services/Auth/GameBackend.Auth.csproj --context AuthDbContext
+```
+
+Начальная миграция предназначена для пустой БД. Если таблицы уже созданы вручную,
+сначала согласуйте существующую схему и историю миграций.
+Для применения через SQL также доступен идемпотентный `InitialAuth.sql`
+в каталоге миграций.
 
 Перед запуском передайте настройки через окружение процесса, например в PowerShell:
 

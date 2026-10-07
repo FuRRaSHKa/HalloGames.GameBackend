@@ -4,8 +4,6 @@ using GameBackend.HalloGames.Auth.Api.Models.Credentials;
 using GameBackend.HalloGames.Auth.Api.Services;
 using GameBackend.HalloGames.Tokens;
 using GameBackend.HalloGames.Time;
-using GameBackend.HalloGames.Tokens.Data;
-using GameBackend.HalloGames.Users.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,23 +17,19 @@ void ConfigureDatabase(DbContextOptionsBuilder options)
     options.UseNpgsql(connectionString);
 }
 
-builder.Services.AddDbContext<UserDbContext>(ConfigureDatabase);
-builder.Services.AddDbContext<PasswordDbContext>(ConfigureDatabase);
-builder.Services.AddDbContext<RefreshTokenDbContext>(ConfigureDatabase);
+builder.Services.AddDbContext<AuthDbContext>(ConfigureDatabase);
 
 builder.Services.AddScoped<IAuthProvider<PasswordCredentials>, PasswordAuthProvider>();
 builder.Services.AddScoped<IAuthProviderSelector, AuthProviderSelector>();
 builder.Services.AddSingleton<ITimeService, SystemTimeService>();
 builder.Services.AddScoped<ITokenService>(services => new TokenService(
     services.GetRequiredService<IConfiguration>(),
-    services.GetRequiredService<RefreshTokenDbContext>(), 
-    services.GetRequiredService<UserDbContext>(),
+    services.GetRequiredService<AuthDbContext>(),
     services.GetRequiredService<ITimeService>()));
 
 builder.Services.AddScoped<IAuthService>(services => new AuthService(
     services.GetRequiredService<IAuthProviderSelector>(),
-    services.GetRequiredService<ITokenService>(),
-    services.GetRequiredService<UserDbContext>()));
+    services.GetRequiredService<ITokenService>()));
 
 builder.Services.AddControllers();
 

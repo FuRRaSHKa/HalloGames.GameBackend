@@ -2,8 +2,6 @@
 using GameBackend.HalloGames.Auth.Api.Models.Credentials;
 using GameBackend.HalloGames.Auth.Api.Models.Results;
 using GameBackend.HalloGames.Tokens;
-using GameBackend.HalloGames.Users;
-using GameBackend.HalloGames.Users.Data;
 using GameBackend.HalloGames.Users.Models;
 
 namespace GameBackend.HalloGames.Auth.Api.Services
@@ -13,7 +11,7 @@ namespace GameBackend.HalloGames.Auth.Api.Services
         private readonly IAuthProviderSelector _providerSelector;
         private readonly ITokenService _tokenService;
 
-        internal AuthService(IAuthProviderSelector authProviderSelector, ITokenService tokenService, UserDbContext userDbContext)
+        internal AuthService(IAuthProviderSelector authProviderSelector, ITokenService tokenService)
         {
             _providerSelector = authProviderSelector;
             _tokenService = tokenService;

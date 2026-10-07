@@ -1,7 +1,6 @@
-using GameBackend.HalloGames.Tokens.Data;
+using GameBackend.HalloGames.Auth.Api.Data;
 using GameBackend.HalloGames.Tokens.Models;
 using GameBackend.HalloGames.Time;
-using GameBackend.HalloGames.Users.Data;
 using GameBackend.HalloGames.Users.Models;
 using GameBackend.HalloGames.Utils;
 using Microsoft.EntityFrameworkCore;
@@ -16,15 +15,13 @@ namespace GameBackend.HalloGames.Tokens
     internal class TokenService : ITokenService
     {
         private readonly IConfiguration _configuration;
-        private readonly RefreshTokenDbContext _refreshTokenBdContext;
-        private readonly UserDbContext _userDbContext;
+        private readonly AuthDbContext _authDbContext;
         private readonly ITimeService _timeService;
 
-        internal TokenService(IConfiguration configuration, RefreshTokenDbContext refreshTokenBdContext, UserDbContext userDbContext, ITimeService timeService)
+        internal TokenService(IConfiguration configuration, AuthDbContext authDbContext, ITimeService timeService)
         {
             _configuration = configuration;
-            _refreshTokenBdContext = refreshTokenBdContext;
-            _userDbContext = userDbContext;
+            _authDbContext = authDbContext;
             _timeService = timeService;
         }
 
@@ -66,12 +63,12 @@ namespace GameBackend.HalloGames.Tokens
         public async Task<string?> GenerateAccesToken(string refreshToken)
         {
             var tokenHash = HashUtils.HashRefrestToken(refreshToken);
-            var refreshTokens = await _refreshTokenBdContext.RefreshTokens.FirstOrDefaultAsync(f => f.Token == tokenHash);
+            var refreshTokens = await _authDbContext.RefreshTokens.FirstOrDefaultAsync(f => f.Token == tokenHash);
 
             if (refreshTokens == null || refreshTokens.IsRevoked || refreshTokens.Expires <= _timeService.UtcNow)
                 return null;
 
-            var user = await _userDbContext.Users.FirstOrDefaultAsync(u => u.Id == refreshTokens.UserId);
+            var user = await _authDbContext.Users.FirstOrDefaultAsync(u => u.Id == refreshTokens.UserId);
             if (user == null)
                 return null;
 
@@ -91,8 +88,8 @@ namespace GameBackend.HalloGames.Tokens
                 double.Parse(_configuration["Jwt:RefreshTokenExpirationDays"]!))
             };
 
-            _refreshTokenBdContext.RefreshTokens.Add(refreshToken);
-            await _refreshTokenBdContext.SaveChangesAsync();
+            _authDbContext.RefreshTokens.Add(refreshToken);
+            await _authDbContext.SaveChangesAsync();
             return token;
         }
     }
